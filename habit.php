@@ -8,7 +8,7 @@ if(isset($_POST['name']))
 	$description = $_POST['description'];
 	$start_date = $_POST['start_date'];
 	$end_date = $_POST['end_date'];
-	$is_everyday = isset($_POST['publishok']);	
+	$is_everyday = isset($_POST['everyday']);	
 	$min_times = $_POST['min_reps'];
 	$max_times = $_POST['max_reps'];
 	$build_up_amount = $_POST['rep_build_up'];
