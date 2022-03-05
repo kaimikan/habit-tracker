@@ -36,7 +36,9 @@ $mysqli->close();
                 <th>Max Times</th>
                 <th>Repetition Prize</th>
                 <th>Bounty</th>
+                <th>Delete</th>
             </tr>
+        	<form name="form_habit" method="post" action="delete_habit.php">
 	<?php   // LOOP TILL END OF DATA 
 		while($rows=$result->fetch_assoc())
 		{
@@ -53,10 +55,12 @@ $mysqli->close();
 			<td><?php echo $rows['max_times'];?></td>
 			<td><?php echo $rows['build_up_amount'].' $';?></td>
 			<td><?php echo $rows['bounty'].' $';?></td>
+			<td><input type="submit" value="Delete" name="delete_id[<?php echo $rows['id'];?>]"></td>
 			</tr>
 	<?php
 		}
 	?>
+			</form>
 	</table>
 </body>
 </html>

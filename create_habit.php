@@ -29,3 +29,16 @@ else
 	
 }
 ?>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Habit Tracker</title>
+    <script src="menu.js"></script>
+</head>
+
+<body>
+</body>
+</html>
