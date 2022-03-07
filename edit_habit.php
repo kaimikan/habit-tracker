@@ -22,6 +22,7 @@ $row = mysqli_fetch_assoc($result);
     <meta charset="utf-8">
     <title>Habit Creation</title>
     <script src="menu.js"></script>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -41,7 +42,7 @@ $row = mysqli_fetch_assoc($result);
         else 
         {
         ?>
-        <form name="form_habit" method="post" action="">
+        <form name="form_habit" class="habit-form" method="post" action="">
 
             <input type="hidden" name="new" value="1" />
             <p>
@@ -61,7 +62,7 @@ $row = mysqli_fetch_assoc($result);
                 <input type="date" name="end_date" id="id_end_date" value="<?php echo $row['end_date']; ?>">
             </p>
             <p>
-                <label for="id_everyday">Everyday:</label>
+                <label for="id_everyday" id="everyday-label">Everyday:</label>
                 <?php 
                     if ($row['is_everyday'] == 0)
                         echo '<input type="checkbox" name="everyday" id="id_everyday">';

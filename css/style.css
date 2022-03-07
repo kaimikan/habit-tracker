@@ -31,7 +31,7 @@ input[type=submit][value=Delete]  {
   cursor: pointer;
 }
 
-button[name=edit] {
+a[name=edit-button] {
   background-color: lightskyblue;
   border: none;
   color: white;
@@ -39,4 +39,30 @@ button[name=edit] {
   text-decoration: none;
   margin: 2px 1px;
   cursor: pointer;
+}
+
+fieldset {
+  background-color: whitesmoke;
+  margin: auto;
+  width: 50%;
+}
+
+legend {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+.habit-form {
+  margin: auto;
+}
+
+.habit-form input:not(#id_everyday), .habit-form textarea, .habit-form select, .habit-form button {
+  width : 100%;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.habit-form label:not(#everyday-label) {
+  display: block;
 }

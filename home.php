@@ -58,7 +58,7 @@ $mysqli->close();
 			<td><?php echo $rows['build_up_amount'].' $';?></td>
 			<td><?php echo $rows['bounty'].' $';?></td>
 			<td><input type="submit" value="Delete" name="delete_id[<?php echo $rows['id'];?>]"></td>
-			<td><button name="edit" href="edit_habit.php?id=<?php echo $rows['id']; ?>"> Edit </button>
+			<td><a name="edit-button" href="edit_habit.php?id=<?php echo $rows['id']; ?>"> Edit </a>
 			</tr>
 	<?php
 		}
