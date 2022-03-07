@@ -21,11 +21,12 @@ $mysqli->close();
 	<meta charset="utf-8">
 	<title>Habit Tracker</title>
  	<script src="menu.js"></script>
+ 	<link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 	<p>Home page of habit tracker displaying all current habits</p>
-	<table>
+	<table id="habits-table">
             <tr>
                 <th>Name</th>
                 <th>Description</th>
@@ -37,6 +38,7 @@ $mysqli->close();
                 <th>Repetition Prize</th>
                 <th>Bounty</th>
                 <th>Delete</th>
+                <th>Edit</th>
             </tr>
         	<form name="form_habit" method="post" action="delete_habit.php">
 	<?php   // LOOP TILL END OF DATA 
@@ -56,7 +58,7 @@ $mysqli->close();
 			<td><?php echo $rows['build_up_amount'].' $';?></td>
 			<td><?php echo $rows['bounty'].' $';?></td>
 			<td><input type="submit" value="Delete" name="delete_id[<?php echo $rows['id'];?>]"></td>
-			<td><a href="edit_habit.php?id=<?php echo $rows['id']; ?>"> Edit </a>
+			<td><button name="edit" href="edit_habit.php?id=<?php echo $rows['id']; ?>"> Edit </button>
 			</tr>
 	<?php
 		}
