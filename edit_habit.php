@@ -21,7 +21,7 @@ $row = mysqli_fetch_assoc($result);
 <head>
     <meta charset="utf-8">
     <title>Habit Creation</title>
-    <script src="menu.js"></script>
+    <script src="menu.js" active="-"></script>
     <link rel="stylesheet" href="css/style.css">
 </head>
 

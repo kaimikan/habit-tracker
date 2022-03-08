@@ -36,7 +36,7 @@ else
 <head>
     <meta charset="utf-8">
     <title>Habit Tracker</title>
-    <script src="menu.js"></script>
+    <script src="menu.js" active="creation"></script>
 </head>
 
 <body>
