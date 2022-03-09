@@ -1,6 +1,6 @@
 const style = document.createElement('style');
 style.innerHTML = `
-ul {
+ul.menu {
   font-family: Arial, Helvetica, sans-serif;
   list-style-type: none;
   margin: 0;
@@ -9,16 +9,16 @@ ul {
   background-color: lightgray;
 }
 
-li {
+li.menu {
   float: left;
   border-right:1px solid whitesmoke;
 }
 
-li:last-child {
+li.menu:last-child {
   border-right: none;
 }
 
-li a {
+li.menu a {
   display: block;
   color: white;
   text-align: center;
@@ -26,7 +26,7 @@ li a {
   text-decoration: none;
 }
 
-li a:hover:not(.active) {
+li.menu a:hover:not(.active) {
   background-color: grey;
 }
 
@@ -43,20 +43,24 @@ var activePage = document.currentScript.getAttribute('active');
 
 var homeClass = '';
 var creationClass = '';
+var calendarClass = '';
 
-(activePage == 'home') ? homeClass = 'active' : (activePage == '-' ? creationClass = '' : creationClass = 'active'); //<- lol, sinning
+(activePage == 'home') ? homeClass = 'active' : (activePage == '-' ? creationClass = '' : (activePage == 'creation' ? creationClass = 'active' : calendarClass="active")); //<- lol, sinning
 
 
-var homeLink = '<li><a href="home.php" class="' + homeClass + '">Home</a></li>';
-var creationLink = '<li><a href="habit_creation.html" class="' + creationClass + '">Add Habit</a></li>';
+var homeLink = '<li class="menu"><a href="home.php" class="' + homeClass + '">Home</a></li>';
+var creationLink = '<li class="menu"><a href="habit_creation.html" class="' + creationClass + '">Add Habit</a></li>';
+var calendarLink = '<li class="menu"><a href="calendar.php" class="' + calendarClass + '">Calendar</a></li>';
 
 document.write(`
-<ul>
+<ul class='menu'>
     `
     + 
     homeLink
     + 
     creationLink 
+    + 
+    calendarLink 
     +
     `
 </ul>
