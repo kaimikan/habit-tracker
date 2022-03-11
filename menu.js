@@ -13,7 +13,7 @@ li.menu {
   float: left;
   border-right:1px solid whitesmoke;
 }
-
+ 
 li.menu:last-child {
   border-right: none;
 }
@@ -36,6 +36,7 @@ li.menu a:hover:not(.active) {
 
 document.head.appendChild(style);
 
+// FIXME
 // activePage can be: 'home', 'creation', '-'
 // this is a weird solution but works atm
 // not scalable at all mama mia
@@ -45,23 +46,33 @@ var homeClass = '';
 var creationClass = '';
 var calendarClass = '';
 
-(activePage == 'home') ? homeClass = 'active' : (activePage == '-' ? creationClass = '' : (activePage == 'creation' ? creationClass = 'active' : calendarClass="active")); //<- lol, sinning
+activePage == 'home'
+  ? (homeClass = 'active')
+  : activePage == '-'
+  ? (creationClass = '')
+  : activePage == 'creation'
+  ? (creationClass = 'active')
+  : (calendarClass = 'active'); //<- lol, sinning
 
+var homeLink =
+  '<li class="menu"><a href="home.php" class="' + homeClass + '">Home</a></li>';
+var creationLink =
+  '<li class="menu"><a href="habit_creation.html" class="' +
+  creationClass +
+  '">Add Habit</a></li>';
+var calendarLink =
+  '<li class="menu"><a href="calendar.php" class="' +
+  calendarClass +
+  '">Calendar</a></li>';
 
-var homeLink = '<li class="menu"><a href="home.php" class="' + homeClass + '">Home</a></li>';
-var creationLink = '<li class="menu"><a href="habit_creation.html" class="' + creationClass + '">Add Habit</a></li>';
-var calendarLink = '<li class="menu"><a href="calendar.php" class="' + calendarClass + '">Calendar</a></li>';
-
-document.write(`
+document.write(
+  `
 <ul class='menu'>
-    `
-    + 
-    homeLink
-    + 
-    creationLink 
-    + 
-    calendarLink 
-    +
+    ` +
+    homeLink +
+    creationLink +
+    calendarLink +
     `
 </ul>
-`);
+`
+);

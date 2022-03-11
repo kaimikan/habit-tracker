@@ -9,7 +9,7 @@ if ($mysqli->connect_error) {
     $mysqli->connect_errno . ') '. 
     $mysqli->connect_error);
 }
-  
+
 // SQL query to select data from database
 $sql = "SELECT * FROM habits WHERE id = $habit_id";
 $result = mysqli_query($mysqli, $sql) or die ( mysqli_error());

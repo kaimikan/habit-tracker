@@ -28,7 +28,7 @@ if(isset($_POST['delete_id']) && is_array($_POST['delete_id'])){
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Habit Tracker</title>
+    <title>Habit Tracker</title> 
     <script src="menu.js" active="-"></script>
 </head>
 
