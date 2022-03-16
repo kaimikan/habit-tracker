@@ -6,16 +6,15 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-
 <div class="container">
   <div class="calendar">
     <div class="month">
-      <i class="fas fa-angle-left prev"></i>
+      <i class="fas fa-angle-left arrow prev"></i>
         <div class="date">
           <h1></h1>
           <p></p>
         </div>
-        <i class="fas fa-angle-right next"></i>
+        <i class="fas fa-angle-right arrow next"></i>
     </div>
     <div class="weekdays">
       <div>Sun</div>
