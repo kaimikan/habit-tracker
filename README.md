@@ -14,15 +14,7 @@ The currently planned conditions:
 - max/min condition - needs to be done up to a max of X times or at least min X times to be legible for bounty
 - day build up condition - every day of the month adds $(bounty/days in the month) to the month bounty, skipping days does not cancel it just doesn't add to it
 
-## Technologies
-
-- HTML - for basic structure and information display
-- PHP - connecting habit information to a database
-- XAMPP/SQL - for having and using the local database
-- Javascript - dynamic events (secondary)
-- CSS - styling (secondary)
-
 ## References
 
 A version of the idea in Excel represents the basic structure:
-![Reference](images/reference.JPG)
+![Reference](public/images/reference.JPG)
