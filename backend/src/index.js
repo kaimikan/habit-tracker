@@ -11,6 +11,8 @@ const multer = require("multer");
 // used to fetch uploaded files from server
 const path = require("path");
 
+const habitsRouter = require("./routes/habits");
+
 dotenv.config();
 mongoose.connect(
   process.env.MONGO_URL,
@@ -27,6 +29,9 @@ mongoose.connect(
 app.use(express.json());
 app.use(helmet());
 app.use(morgan("common"));
+
+// ROUTERS
+app.use(habitsRouter);
 
 const port = process.env.PORT;
 app.listen(port, () => {
